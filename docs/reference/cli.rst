@@ -444,7 +444,7 @@ Show or edit the user configuration. This command does one of three things:
 * By default, sensitive information like passwords is removed when dumping the
   configuration. The ``--clear`` option includes this sensitive data.
 * With the ``--edit`` option, beets attempts to open your config file for
-  editing. It first tries the ``$EDITOR`` environment variable, followed by
+  editing. It first tries the ``$VISUAL`` environment variable, followed by
   ``$EDITOR`` and then a fallback option depending on your platform: ``open`` on
   OS X, ``xdg-open`` on Unix, and direct invocation on Windows.
 
