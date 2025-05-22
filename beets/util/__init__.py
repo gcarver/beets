@@ -890,7 +890,7 @@ def open_anything() -> str:
     if sys_name == "Darwin":
         base_cmd = "open"
     elif sys_name == "Windows":
-        base_cmd = "start"
+        base_cmd = "cmd /c start"
     else:  # Assume Unix
         base_cmd = "xdg-open"
     return base_cmd
@@ -917,10 +917,6 @@ def interactive_open(targets: Sequence[str], command: str):
     Can raise `OSError`.
     """
     assert command
-    
-    if platform.system() == "Windows" and command == "start" and len(targets) == 1:
-        os.startfile(targets[0])
-        return exit(0)
 
     # Split the command string into its arguments.
     try:
