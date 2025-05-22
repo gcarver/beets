@@ -28,6 +28,8 @@ Bug fixes:
 * :doc:`plugins/musicbrainz`: fix regression where user configured
   ``extra_tags`` have been read incorrectly.
   :bug:`5788`
+* Fix ``util.open_anything`` on Windows which prevented ``config -e`` and
+  `/plugins/play` from working properly.
   :bug:`2208`
   :bug:`2717`
 
