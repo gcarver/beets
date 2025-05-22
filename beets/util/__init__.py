@@ -917,6 +917,10 @@ def interactive_open(targets: Sequence[str], command: str):
     Can raise `OSError`.
     """
     assert command
+    
+    if platform.system() == "Windows" and command == "start" and len(targets) == 1:
+        os.startfile(targets[0])
+        return exit(0)
 
     # Split the command string into its arguments.
     try:

@@ -21,7 +21,7 @@ import re
 from collections import Counter
 from collections.abc import Sequence
 from itertools import chain
-from platform import python_version
+from platform import platform, python_version
 from typing import Any, NamedTuple
 
 import beets
@@ -2371,6 +2371,8 @@ def config_edit():
             message += (
                 ". Please set the VISUAL (or EDITOR) environment variable"
             )
+        else:
+            message += f"\nwhen launching '{editor} {path}'"
         raise ui.UserError(message)
 
 
