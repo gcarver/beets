@@ -28,6 +28,8 @@ Bug fixes:
 * :doc:`plugins/musicbrainz`: fix regression where user configured
   ``extra_tags`` have been read incorrectly.
   :bug:`5788`
+  :bug:`2208`
+  :bug:`2717`
 
 For packagers:
 
