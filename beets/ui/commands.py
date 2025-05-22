@@ -21,7 +21,7 @@ import re
 from collections import Counter
 from collections.abc import Sequence
 from itertools import chain
-from platform import platform, python_version
+from platform import python_version
 from typing import Any, NamedTuple
 
 import beets
